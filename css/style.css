@@ -66,6 +66,7 @@ body {
 }
 .panel.active h3 {
   opacity: 1;
+  color: white;
 }
 footer {
   position: fixed;
@@ -94,9 +95,12 @@ footer {
     transition: flex 0.7s ease-in-out;
   }
   .panel h3 {
-    margin-left: 10px;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
+    font-size: medium;
+    bottom: 10px;
+    left: 30px;
+    color: rgba(0, 0, 0, 0.8);
   }
   .panel.active {
     flex: 1 1 50vh;
