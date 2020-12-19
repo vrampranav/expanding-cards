@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgba(0, 0, 0, 0.1);
+}
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+#card1 {
+  background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+#card2 {
+  background-image: url("https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+}
+#card3 {
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80");
+}
+#card4 {
+  background-image: url("https://images.unsplash.com/photo-1470770903676-69b98201ea1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+}
+#card5 {
+  background-image: url("https://images.unsplash.com/photo-1505245208761-ba872912fac0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+}
+
+.panels {
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+  align-items: center;
+}
+.panel {
+  background-size: cover 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+.panel h3 {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 10;
+}
+.panel.active h3 {
+  opacity: 1;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .panels {
+    flex-direction: column;
+  }
+  .panel {
+    width: 70vw;
+    margin: auto;
+    background-size: cover 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px 0;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    flex: 1 1 5vh;
+    transition: flex 0.7s ease-in-out;
+  }
+  .panel h3 {
+    margin-left: 10px;
+    opacity: 0;
+    position: absolute;
+  }
+  .panel.active {
+    flex: 1 1 50vh;
+  }
+}
